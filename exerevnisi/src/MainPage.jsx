@@ -5,7 +5,14 @@ import { BsArrowRight } from 'react-icons/bs'
 import { Navigate, useNavigate } from 'react-router-dom';
 
 export const MainPage = () => {
+    
     const navigate = useNavigate()
+
+    const handleTutor = (event)=>{
+       
+        navigate("/aitutor")
+        window.scrollTo(0, 0);
+    }
     return (
         <DIV>
            
@@ -24,7 +31,7 @@ export const MainPage = () => {
                 <div className='studytable'>
                     <div>
                         <h1>Universal AI Tutor.</h1>
-                        <button onClick={()=>navigate('/aitutor')} className='Button'><BsArrowRight /></button>
+                        <button onClick={handleTutor} className='Button'><BsArrowRight /></button>
                     </div>
                 </div>
 
@@ -32,7 +39,7 @@ export const MainPage = () => {
                     <div>
                         <h1>STUDYtable</h1>
                         <p>Study With Personal Care</p>
-                        <button className='Button'><BsArrowRight /></button>
+                        <a target='_blank' href='http://studytable.co.in/' className='Button'><BsArrowRight /></a>
                     </div>
                 </div>
                 
